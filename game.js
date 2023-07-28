@@ -1,3 +1,31 @@
+const body = document.querySelector("body");
+
+const rockButton = document.createElement("button");
+rockButton.classList.add("button");
+rockButton.setAttribute("id","rock");
+rockButton.textContent = "Rock";
+
+const paperButton = document.createElement("button");
+paperButton.classList.add("button");
+paperButton.setAttribute("id","paper");
+paperButton.textContent = "Paper";
+
+const scissorsButton = document.createElement("button");
+scissorsButton.classList.add("button");
+scissorsButton.setAttribute("id","scissors");
+scissorsButton.textContent = "Scissors";
+
+const divButtons = document.createElement("div");
+divButtons.setAttribute("id","buttons");
+
+body.appendChild(divButtons);
+divButtons.appendChild(rockButton);
+divButtons.appendChild(paperButton);
+divButtons.appendChild(scissorsButton);
+
+let playerChoice;
+let computerChoice;
+
 function getComputerChoice() {
     let x = Math.floor(Math.random() * 3);
     if (x === 0) {
@@ -10,9 +38,6 @@ function getComputerChoice() {
         return "Scissors";
     }
 }
-
-let playerChoice;
-let computerChoice;
 
 function playRound(playerSelection, computerSelection) {
     let pCompare = playerSelection.toUpperCase();
@@ -46,6 +71,8 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+
+/*
 function game() {
     let playerScore = 0;
     let computerScore = 0;
@@ -73,5 +100,4 @@ function game() {
         return "It's a Tie.";
     }
 }
-
-console.log(game());
+*/
