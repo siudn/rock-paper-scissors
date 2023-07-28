@@ -118,4 +118,10 @@ function score(result) {
     else if (result.includes("Lose")) {
         computerScore++;
     }
+    if (playerScore == 5) {
+        displayWinner.textContent = "You Won!";
+    }
+    else if (computerScore == 5) {
+        displayWinner.textContent = "Oh no... you lost :(";
+    }
 }
